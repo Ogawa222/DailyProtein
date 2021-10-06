@@ -30,8 +30,7 @@
             android:layout_height="30dp"
             android:background="@drawable/frame_border"
             android:gravity="right"
-            android:inputType="text"
-            android:paddingRight="10dp" />
+            android:inputType="text" />
     </LinearLayout>
 
     <LinearLayout
@@ -63,7 +62,15 @@
             android:layout_height="wrap_content"
             android:text="g"
             android:textSize="20sp"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_favorite"
+            android:minHeight="0dp"
+            android:minWidth="0dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -87,14 +94,15 @@
             android:textSize="20sp"
             android:gravity="center"
             android:background="@drawable/frame_border"
-            android:paddingRight="10dp"/>
+            android:layout_marginRight="10dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/select"
             android:onClick="showDatePickerDialog"
-            android:paddingRight="10dp"/>
+            android:minHeight="0dp"
+            android:minWidth="0dp"/>
 
     </LinearLayout>
 
@@ -119,16 +127,23 @@
             android:textSize="20sp"
             android:gravity="center"
             android:background="@drawable/frame_border"
-            android:paddingRight="10dp"/>
+            android:layout_marginRight="10dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/select"
             android:onClick="showTimePickerDialog"
-            android:paddingRight="10dp"/>
+            android:minHeight="0dp"
+            android:minWidth="0dp"/>
 
     </LinearLayout>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:layout_gravity="center_horizontal" />
 
 
 

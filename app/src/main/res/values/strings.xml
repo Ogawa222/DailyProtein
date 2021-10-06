@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">日間タンパク質摂取量記録</string>
-    <string name="top_message">日々のタンパク質摂取量を計算しましよう！！</string>
-    <string name="register">登録</string>
+    <string name="daily_protein">日間摂取量</string>
+    <string name="graph">グラフ</string>
+    <string name="set_border">1日分摂取量設定</string>
+    <string name="favorite">お気に入り</string>
+    <string name="top_message">日々のタンパク質摂取量を記録しましよう！！</string>
+    <string name="register">食べた！</string>
     <string name="delete">削除</string>
     <string name="cancel">キャンセル</string>
     <string name="food_name">食品名</string>
@@ -9,4 +13,5 @@
     <string name="pick_date">日付</string>
     <string name="pick_time">時刻</string>
     <string name="select">選択</string>
+    <string name="select_favorite">お気に入り</string>
 </resources>

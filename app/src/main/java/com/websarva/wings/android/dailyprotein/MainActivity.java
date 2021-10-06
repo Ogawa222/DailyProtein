@@ -7,6 +7,8 @@ import androidx.fragment.app.DialogFragment;
 
 import android.app.TimePickerDialog;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TextView;
@@ -55,5 +57,14 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        // メニューインフレーターの取得
+        MenuInflater inflater = getMenuInflater();
+        // オプションメニュー用.xmlファイルをインフレート
+        inflater.inflate(R.menu.menu_options_menu_list, menu);
+        return true;
     }
 }

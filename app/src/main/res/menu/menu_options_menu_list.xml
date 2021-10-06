@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/SetBorder"
+        app:showAsAction="never"
+        android:title="@string/set_border"/>
+    <item
+        android:id="@+id/DailyProtein"
+        app:showAsAction="never"
+        android:title="@string/daily_protein"/>
+    <item
+        android:id="@+id/Graph"
+        app:showAsAction="never"
+        android:title="@string/graph"/>
+    <item
+        android:id="@+id/Favorite"
+        app:showAsAction="never"
+        android:title="@string/favorite"/>
+
+</menu>
