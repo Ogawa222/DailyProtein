@@ -9,16 +9,13 @@
         android:layout_height="wrap_content"
         android:text="@string/top_message"
         android:textSize="16sp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="20dp"
-        android:paddingLeft="20dp"/>
+        android:padding="30dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="10dp">
+        android:paddingBottom="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,10 +26,11 @@
             android:paddingLeft="20dp"/>
 
         <EditText
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
             android:background="@drawable/frame_border"
-            android:gravity="center"
+            android:gravity="right"
+            android:inputType="text"
             android:paddingRight="10dp" />
     </LinearLayout>
 
@@ -40,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="10dp">
+        android:paddingBottom="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,12 +49,12 @@
             android:paddingLeft="20dp"/>
 
         <EditText
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
             android:inputType="number"
             android:digits="0123456789"
             android:maxLength="3"
-            android:gravity="center"
+            android:gravity="right"
             android:background="@drawable/frame_border"
             android:paddingRight="10dp"/>
 
@@ -68,7 +66,69 @@
             android:paddingLeft="10dp"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_date"
+            android:textSize="20sp"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/frame_border"
+            android:paddingRight="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select"
+            android:onClick="showDatePickerDialog"
+            android:paddingRight="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_time"
+            android:textSize="20sp"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/frame_border"
+            android:paddingRight="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select"
+            android:onClick="showTimePickerDialog"
+            android:paddingRight="10dp"/>
+
+    </LinearLayout>
 
 
 
