@@ -7,4 +7,5 @@
     <string name="food_name">食品名</string>
     <string name="protein_weight">タンパク質量</string>
     <string name="date">日付</string>
+    <string name="time">時刻</string>
 </resources>
