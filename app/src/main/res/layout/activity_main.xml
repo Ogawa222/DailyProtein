@@ -26,6 +26,7 @@
             android:paddingLeft="20dp"/>
 
         <EditText
+            android:id="@+id/food_name"
             android:layout_width="200dp"
             android:layout_height="30dp"
             android:background="@drawable/frame_border"
@@ -48,11 +49,11 @@
             android:paddingLeft="20dp"/>
 
         <EditText
-            android:layout_width="50dp"
+            android:id="@+id/protein_weight"
+            android:layout_width="65dp"
             android:layout_height="30dp"
-            android:inputType="number"
-            android:digits="0123456789"
-            android:maxLength="3"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
             android:gravity="right"
             android:background="@drawable/frame_border"
             android:paddingRight="10dp"/>
@@ -62,7 +63,7 @@
             android:layout_height="wrap_content"
             android:text="g"
             android:textSize="20sp"
-            android:paddingLeft="10dp"
+            android:paddingLeft="5dp"
             android:layout_marginRight="10dp"/>
 
         <Button
@@ -77,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="10dp">
+        android:paddingBottom="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -93,16 +94,10 @@
             android:layout_height="30dp"
             android:textSize="20sp"
             android:gravity="center"
+            android:clickable="true"
+            android:onClick="showDatePickerDialog"
             android:background="@drawable/frame_border"
             android:layout_marginRight="10dp"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/select"
-            android:onClick="showDatePickerDialog"
-            android:minHeight="0dp"
-            android:minWidth="0dp"/>
 
     </LinearLayout>
 
@@ -110,7 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="10dp">
+        android:paddingBottom="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -126,16 +121,10 @@
             android:layout_height="30dp"
             android:textSize="20sp"
             android:gravity="center"
+            android:clickable="true"
+            android:onClick="showTimePickerDialog"
             android:background="@drawable/frame_border"
             android:layout_marginRight="10dp"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/select"
-            android:onClick="showTimePickerDialog"
-            android:minHeight="0dp"
-            android:minWidth="0dp"/>
 
     </LinearLayout>
     
@@ -143,6 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/register"
+        android:onClick="onRegisterButtonClick"
         android:layout_gravity="center_horizontal" />
 
 
