@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 日付・時刻取得のためのボタン
+        // 日付・時刻取得のため
         textViewDate = findViewById(R.id.tvDate);
         textViewTime = findViewById(R.id.tvTime);
 

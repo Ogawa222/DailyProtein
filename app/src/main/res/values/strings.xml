@@ -8,10 +8,14 @@
     <string name="register">食べた！</string>
     <string name="delete">削除</string>
     <string name="cancel">キャンセル</string>
+<!--  登録画面  -->
     <string name="food_name">食品名</string>
     <string name="protein_weight">タンパク質量</string>
     <string name="pick_date">日付</string>
     <string name="pick_time">時刻</string>
     <string name="select">選択</string>
+<!--  メニュー  -->
     <string name="select_favorite">お気に入り</string>
+<!--  日間データ  -->
+    <string name="search">検索</string>
 </resources>
