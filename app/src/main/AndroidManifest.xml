@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DailyProtein">
         <activity
-            android:name=".DailyProteinActivity"
+            android:name=".EditFoodActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DailyHistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegistrationHistoryActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

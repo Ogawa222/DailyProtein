@@ -3,15 +3,19 @@ package com.websarva.wings.android.dailyprotein;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class DailyProteinActivity extends AppCompatActivity {
+public class DailyHistoryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_daily_protein);
+        setContentView(R.layout.activity_daily_history);
 
         // アクションバーを取得
         ActionBar actionBar = getSupportActionBar();
@@ -27,6 +31,8 @@ public class DailyProteinActivity extends AppCompatActivity {
         int itemId = item.getItemId();
         // 選択されたメニューが「戻る」の場合、アクティビティを終了
         if(itemId == android.R.id.home){
+            Intent intent = new Intent(DailyHistoryActivity.this, RegistrationHistoryActivity.class);
+            startActivity(intent);
             finish();
         }
         // それ以外・・・

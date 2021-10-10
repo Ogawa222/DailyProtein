@@ -9,7 +9,15 @@
         android:layout_height="wrap_content"
         android:text="@string/top_message"
         android:textSize="16sp"
-        android:padding="30dp"/>
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"/>
+
+
+    <fragment
+        android:id="@+id/fragmentDailyFoodList"
+        android:name="com.websarva.wings.android.dailyprotein.DailyFoodListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
 
 
 </LinearLayout>
