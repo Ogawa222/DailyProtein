@@ -6,9 +6,9 @@
         app:showAsAction="never"
         android:title="@string/set_border"/>
     <item
-        android:id="@+id/DailyProtein"
+        android:id="@+id/RegistrationHistory"
         app:showAsAction="never"
-        android:title="@string/daily_protein"/>
+        android:title="@string/registration_history"/>
     <item
         android:id="@+id/Graph"
         app:showAsAction="never"

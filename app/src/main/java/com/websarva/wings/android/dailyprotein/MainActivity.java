@@ -1,6 +1,5 @@
 package com.websarva.wings.android.dailyprotein;
 
-import androidx.fragment.app.FragmentActivity;
 import android.app.DatePickerDialog.OnDateSetListener;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
@@ -59,16 +58,13 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
 
     @Override
     public void onTimeSet(TimePicker view, int hour, int minute) {
-
-        String str = String.format(Locale.US, "%d:%02d", hour, minute);
+        String str = String.format(Locale.JAPAN, "%d:%02d", hour, minute);
         textViewTime.setText( str );
-
     }
 
-    public void showTimePickerDialog(View v) {
+    public void showTimePickerDialog(View view) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
-
     }
 
     // オプションメニューの作成
@@ -85,8 +81,8 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
-            case R.id.DailyProtein:
-                Intent intent = new Intent(getApplication(), DailyProteinActivity.class);
+            case R.id.RegistrationHistory:
+                Intent intent = new Intent(getApplication(), RegistrationHistoryActivity.class);
                 startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

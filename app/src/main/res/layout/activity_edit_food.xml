@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/top_message"
+        android:textSize="16sp"
+        android:padding="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food_name"
+            android:textSize="20sp"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/edit_food_name"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:background="@drawable/frame_border"
+            android:gravity="right"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/protein_weight"
+            android:textSize="20sp"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/edit_protein_weight"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:gravity="right"
+            android:background="@drawable/frame_border"
+            android:paddingRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="g"
+            android:textSize="20sp"
+            android:paddingLeft="5dp"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_favorite"
+            android:minHeight="0dp"
+            android:minWidth="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_date"
+            android:textSize="20sp"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/tvEditDate"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="showEditDatePickerDialog"
+            android:background="@drawable/frame_border"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_time"
+            android:textSize="20sp"
+            android:paddingRight="10dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/tvEditTime"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="showEditTimePickerDialog"
+            android:background="@drawable/frame_border"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:onClick="onClickDeleteFoodButton"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit"
+            android:onClick="onClickEditFoodButton"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
