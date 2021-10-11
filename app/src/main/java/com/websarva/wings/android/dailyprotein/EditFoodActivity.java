@@ -1,15 +1,19 @@
 package com.websarva.wings.android.dailyprotein;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
@@ -68,6 +72,18 @@ public class EditFoodActivity extends AppCompatActivity
         int itemId = item.getItemId();
         // 選択されたメニューが「戻る」の場合、アクティビティを終了
         if(itemId == android.R.id.home){
+            // 戻るボタンを押した際、元の画面に戻る(全データ画面に戻るか、日間データに戻るか）
+            Intent intent;
+            if (from.equals("DailyFoodListFragment")) {
+                // 日間データ画面に
+                intent = new Intent(EditFoodActivity.this, DailyHistoryActivity.class);
+                // 選択されていた日付を再度セット
+                intent.putExtra("date", research_date);
+            } else {
+                // 全データ画面に
+                intent = new Intent(EditFoodActivity.this, RegistrationHistoryActivity.class);
+            }
+            startActivity(intent);
             finish();
         }
         // それ以外・・・
@@ -79,35 +95,8 @@ public class EditFoodActivity extends AppCompatActivity
     }
 
     public void onClickDeleteFoodButton(View view){
-        // データベースヘルパーオブジェクトからデータベース接続オブジェクトを取得。
-        DailyProteinDatabaseHelper _dailyProteinHelper = new DailyProteinDatabaseHelper(EditFoodActivity.this);
-        // データベースヘルパーオブジェクトからデータベース接続オブジェクトを取得。
-        SQLiteDatabase db = _dailyProteinHelper.getWritableDatabase();
-        // インサート用SQLの文字列の用意
-        String sqlDelete = "DELETE FROM daily_proteins WHERE _id = "+database_id;
-        // SQL文字列を元にプリペアドステートメントを取得
-        SQLiteStatement stmt = db.compileStatement(sqlDelete);
-        // インサートSQLの実行
-        stmt.executeUpdateDelete();
-
-        // DBヘルパーオブジェクトを閉じる
-        _dailyProteinHelper.close();
-
-        // 編集画面が終了した後、データ削除を反映した上で元の画面に戻る(全データ画面に戻るか、日間データに戻るか）
-        Intent intent;
-        if(from.equals("DailyFoodListFragment")){
-            // データを更新した上で日間データ画面に
-            intent = new Intent(EditFoodActivity.this, DailyHistoryActivity.class);
-            // 選択されていた日付を再度セット
-            intent.putExtra("date",research_date);
-        } else {
-            // データを更新した上での全データ画面に
-            intent = new Intent(EditFoodActivity.this, RegistrationHistoryActivity.class);
-        }
-        startActivity(intent);
-        finish();
-
-        Toast.makeText(EditFoodActivity.this, "指定のタンパク質摂取データを削除しました", Toast.LENGTH_LONG).show();
+        AlertDeleteDialogFragment alertFragment = new AlertDeleteDialogFragment();
+        alertFragment.show(getSupportFragmentManager(), "AlertDeleteDialogFragment");
     }
 
     public void onClickEditFoodButton(View view){
@@ -136,5 +125,34 @@ public class EditFoodActivity extends AppCompatActivity
     public void showEditTimePickerDialog(View view) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
+    }
+
+    public void deleteFood(){
+        DailyProteinDatabaseHelper _dailyProteinHelper = new DailyProteinDatabaseHelper(EditFoodActivity.this);
+        // データベースヘルパーオブジェクトからデータベース接続オブジェクトを取得。
+        SQLiteDatabase db = _dailyProteinHelper.getWritableDatabase();
+        // インサート用SQLの文字列の用意
+        String sqlDelete = "DELETE FROM daily_proteins WHERE _id = " + database_id;
+        // SQL文字列を元にプリペアドステートメントを取得
+        SQLiteStatement stmt = db.compileStatement(sqlDelete);
+        // インサートSQLの実行
+        stmt.executeUpdateDelete();
+
+        // DBヘルパーオブジェクトを閉じる
+        _dailyProteinHelper.close();
+
+        // 編集画面が終了した後、データ削除を反映した上で元の画面に戻る(全データ画面に戻るか、日間データに戻るか）
+        Intent intent;
+        if (from.equals("DailyFoodListFragment")) {
+            // データを更新した上で日間データ画面に
+            intent = new Intent(EditFoodActivity.this, DailyHistoryActivity.class);
+            // 選択されていた日付を再度セット
+            intent.putExtra("date", research_date);
+        } else {
+            // データを更新した上での全データ画面に
+            intent = new Intent(EditFoodActivity.this, RegistrationHistoryActivity.class);
+        }
+        startActivity(intent);
+        finish();
     }
 }

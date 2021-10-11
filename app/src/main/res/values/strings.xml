@@ -23,6 +23,8 @@
     <string name="all_data">これまでの全記録一覧</string>
     <string name="search_by_date">日付ごとにデータを確認</string>
     <string name="edit">編集</string>
+    <string name="dialog_btn_delete">削除</string>
+    <string name="dialog_btn_cancel">キャンセル</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
