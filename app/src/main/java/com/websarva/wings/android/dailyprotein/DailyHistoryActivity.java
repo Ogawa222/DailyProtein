@@ -31,8 +31,15 @@ public class DailyHistoryActivity extends AppCompatActivity {
         int itemId = item.getItemId();
         // 選択されたメニューが「戻る」の場合、アクティビティを終了
         if(itemId == android.R.id.home){
-            Intent intent = new Intent(DailyHistoryActivity.this, RegistrationHistoryActivity.class);
-            startActivity(intent);
+            Intent intent = getIntent();
+            String from = intent.getStringExtra("from");
+            if (from != null) {
+                if (from.equals("MainActivity")) {
+                } else {
+                    intent = new Intent(DailyHistoryActivity.this, RegistrationHistoryActivity.class);
+                    startActivity(intent);
+                }
+            }
             finish();
         }
         // それ以外・・・

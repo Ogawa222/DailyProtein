@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.Locale;
 
 
@@ -81,8 +82,20 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
-            case R.id.RegistrationHistory:
+            case R.id.RegistrationHistory: // これまでの記録へ
                 Intent intent = new Intent(getApplication(), RegistrationHistoryActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.TodayRegistration: // 今日の記録へ
+                Calendar c = Calendar.getInstance();
+                int year = c.get(Calendar.YEAR);
+                int month = c.get(Calendar.MONTH);
+                int day = c.get(Calendar.DAY_OF_MONTH);
+                String date = String.format(Locale.JAPAN, "%d年%d月%d日", year, month+1, day);
+                intent = new Intent(getApplication(), DailyHistoryActivity.class);
+                intent.putExtra("date",date);
+                // 日間データ画面から戻る時の分岐のため
+                intent.putExtra("from","MainActivity");
                 startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

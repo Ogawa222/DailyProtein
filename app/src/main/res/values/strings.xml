@@ -15,6 +15,7 @@
     <string name="pick_time">時刻</string>
     <string name="select">選択</string>
     <!--  メニュー  -->
+    <string name="today_registration">今日の記録</string>
     <string name="registration_history">これまでの記録</string>
     <string name="select_favorite">お気に入り</string>
     <!--  日間データ  -->
