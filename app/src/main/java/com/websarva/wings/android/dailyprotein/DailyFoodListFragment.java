@@ -17,6 +17,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -71,7 +72,7 @@ public class DailyFoodListFragment extends Fragment {
         String date;
         int idxTime;
         String time;
-        double sum_weight = 0;
+        BigDecimal sum_weight = new BigDecimal("0");
         while(cursor.moveToNext()){
             idxId = cursor.getColumnIndex("_id");
             id = String.valueOf(cursor.getInt(idxId));
@@ -91,8 +92,8 @@ public class DailyFoodListFragment extends Fragment {
             food.put("time",time);
             foodList.add(food);
             // 合計タンパク質摂取量の記録
-            double protein_weight = Double.parseDouble(weight);
-            sum_weight += protein_weight;
+            BigDecimal protein_weight = new BigDecimal(weight);
+            sum_weight = sum_weight.add(protein_weight);
         }
         // リストの要素の順序を逆にする
         Collections.reverse(foodList);

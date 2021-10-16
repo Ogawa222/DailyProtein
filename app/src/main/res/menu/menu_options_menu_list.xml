@@ -6,6 +6,10 @@
         app:showAsAction="never"
         android:title="@string/set_border"/>
     <item
+        android:id="@+id/TodayRegistration"
+        app:showAsAction="never"
+        android:title="@string/today_registration"/>
+    <item
         android:id="@+id/RegistrationHistory"
         app:showAsAction="never"
         android:title="@string/registration_history"/>
