@@ -26,7 +26,7 @@
             android:paddingLeft="20dp"/>
 
         <EditText
-            android:id="@+id/edit_food_name"
+            android:id="@+id/edit_favorite_food_name"
             android:layout_width="200dp"
             android:layout_height="30dp"
             android:background="@drawable/frame_border"
@@ -49,7 +49,7 @@
             android:paddingLeft="20dp"/>
 
         <EditText
-            android:id="@+id/edit_protein_weight"
+            android:id="@+id/edit_favorite_protein_weight"
             android:layout_width="65dp"
             android:layout_height="30dp"
             android:inputType="numberDecimal"
@@ -65,61 +65,6 @@
             android:textSize="20sp"
             android:paddingLeft="5dp"
             android:layout_marginRight="10dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pick_date"
-            android:textSize="20sp"
-            android:paddingRight="10dp"
-            android:paddingLeft="20dp"/>
-
-        <TextView
-            android:id="@+id/tvEditDate"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:clickable="true"
-            android:onClick="showEditDatePickerDialog"
-            android:background="@drawable/frame_border"
-            android:layout_marginRight="10dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pick_time"
-            android:textSize="20sp"
-            android:paddingRight="10dp"
-            android:paddingLeft="20dp"/>
-
-        <TextView
-            android:id="@+id/tvEditTime"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:clickable="true"
-            android:onClick="showEditTimePickerDialog"
-            android:background="@drawable/frame_border"
-            android:layout_marginRight="10dp"/>
-
     </LinearLayout>
 
     <LinearLayout
@@ -132,14 +77,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/delete"
-            android:onClick="onClickDeleteFoodButton"
+            android:onClick="onClickDeleteFavoriteFoodButton"
             android:layout_marginRight="5dp"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edit"
-            android:onClick="onClickEditFoodButton"
+            android:onClick="onClickEditFavoriteFoodButton"
             android:layout_marginLeft="5dp"/>
 
     </LinearLayout>

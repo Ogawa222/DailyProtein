@@ -77,6 +77,7 @@ public class RegistrationHistoryActivity extends AppCompatActivity
             Intent intent = new Intent(getApplication(), DailyHistoryActivity.class);
             // 日間データ画面に送るデータに日付を格納
             intent.putExtra("date",date);
+            intent.putExtra("from","RegistrationHistoryActivity");
             startActivity(intent);
             finish();
         }

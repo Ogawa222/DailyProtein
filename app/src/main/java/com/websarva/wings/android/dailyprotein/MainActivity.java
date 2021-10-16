@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
     // オプションメニューのアイテムが選択されたときに呼び出されるメソッド
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+        Intent intent;
         switch (item.getItemId()){
             case R.id.RegistrationHistory: // これまでの記録へ
                 Intent intent = new Intent(getApplication(), RegistrationHistoryActivity.class);

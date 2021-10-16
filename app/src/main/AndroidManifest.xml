@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DailyProtein">
         <activity
+            android:name=".FavoriteEditFoodActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FavoriteFoodListActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FavoriteFoodActivity"
+            android:exported="true" />
+        <activity
             android:name=".EditFoodActivity"
             android:exported="true" />
         <activity
