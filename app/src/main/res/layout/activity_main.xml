@@ -70,8 +70,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/select_favorite"
+            android:textSize="12sp"
             android:minHeight="0dp"
-            android:minWidth="0dp"/>
+            android:minWidth="0dp"
+            android:onClick="onClickDeleteFavoriteFoodButton"/>
     </LinearLayout>
 
     <LinearLayout

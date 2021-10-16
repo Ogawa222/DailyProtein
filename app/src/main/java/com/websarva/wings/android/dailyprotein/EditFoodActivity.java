@@ -148,6 +148,7 @@ public class EditFoodActivity extends AppCompatActivity
             intent = new Intent(EditFoodActivity.this, DailyHistoryActivity.class);
             // 選択されていた日付を再度セット
             intent.putExtra("date", research_date);
+            intent.putExtra("from", "DailyFoodListFragment");
         } else {
             // データを更新した上での全データ画面に
             intent = new Intent(EditFoodActivity.this, RegistrationHistoryActivity.class);

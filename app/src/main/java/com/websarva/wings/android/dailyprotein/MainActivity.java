@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
         _dailyProteinHelper = new DailyProteinDatabaseHelper(MainActivity.this);
     }
 
+    public void onFavoriteSet(String name, String weight){
+        EditText etFoodName = findViewById(R.id.food_name);
+        EditText etProteinWeight = findViewById(R.id.protein_weight);
+        etFoodName.setText(name);
+        etProteinWeight.setText(weight);
+    }
+
     // DatePickerフラグメントを使い日付のセット
     @Override
     public void onDateSet(DatePicker view, int year, int month, int day) {
@@ -84,7 +91,7 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
         Intent intent;
         switch (item.getItemId()){
             case R.id.RegistrationHistory: // これまでの記録へ
-                Intent intent = new Intent(getApplication(), RegistrationHistoryActivity.class);
+                intent = new Intent(getApplication(), RegistrationHistoryActivity.class);
                 startActivity(intent);
                 break;
             case R.id.TodayRegistration: // 今日の記録へ
@@ -97,6 +104,10 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
                 intent.putExtra("date",date);
                 // 日間データ画面から戻る時の分岐のため
                 intent.putExtra("from","MainActivity");
+                startActivity(intent);
+                break;
+            case R.id.Favorite:
+                intent = new Intent(getApplication(), FavoriteFoodActivity.class);
                 startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -148,5 +159,10 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
             tvTime.setText("");
             Toast.makeText(MainActivity.this, "タンパク質摂取量を記録しました！", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public void onClickDeleteFavoriteFoodButton(View view){
+        FavoriteListDialogFragment favoriteListDialogFragment = new FavoriteListDialogFragment();
+        favoriteListDialogFragment.show(getSupportFragmentManager(), "FavoriteListDialogFragment");
     }
 }

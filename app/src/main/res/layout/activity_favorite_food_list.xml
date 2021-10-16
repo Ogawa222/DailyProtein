@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:text="@string/all_data"
+        android:text="@string/all_favorite_food"
         android:textSize="20sp"
         android:paddingRight="10dp"
         android:paddingLeft="10dp"/>
