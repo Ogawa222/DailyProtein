@@ -84,8 +84,9 @@ public class FavoriteFoodActivity extends AppCompatActivity {
     public void onFavoriteRegisterListButtonClick(View view){
         // インテントオブジェクトを生成
         Intent intent = new Intent(getApplication(), FavoriteFoodListActivity.class);
+        // 編集画面が終了した時の分岐のため(全データ画面に戻るか、お気に入り登録に戻るか）
+        intent.putExtra("from","FavoriteFoodActivity");
         startActivity(intent);
-        finish();
     }
 
     @Override

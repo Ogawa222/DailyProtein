@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
         Intent intent;
         switch (item.getItemId()){
             case R.id.RegistrationHistory: // これまでの記録へ
-                Intent intent = new Intent(getApplication(), RegistrationHistoryActivity.class);
+                intent = new Intent(getApplication(), RegistrationHistoryActivity.class);
                 startActivity(intent);
                 break;
             case R.id.TodayRegistration: // 今日の記録へ
@@ -97,6 +97,10 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
                 intent.putExtra("date",date);
                 // 日間データ画面から戻る時の分岐のため
                 intent.putExtra("from","MainActivity");
+                startActivity(intent);
+                break;
+            case R.id.Favorite:
+                intent = new Intent(getApplication(), FavoriteFoodActivity.class);
                 startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

@@ -24,6 +24,7 @@ public class FavoriteEditFoodActivity extends AppCompatActivity {
 
     private String database_id;
     private String from;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class FavoriteEditFoodActivity extends AppCompatActivity {
         // アクションバーの[戻る]メニューを有効に設定
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        Intent intent = getIntent();
+        intent = getIntent();
 
         // タップされた行の各要素の値を取得
         database_id = intent.getStringExtra("id");
@@ -57,7 +58,19 @@ public class FavoriteEditFoodActivity extends AppCompatActivity {
         // 選択されたメニューのIDを取得
         int itemId = item.getItemId();
         // 選択されたメニューが「戻る」の場合、アクティビティを終了
-        if (itemId == android.R.id.home) {
+        if(itemId == android.R.id.home){
+            // 戻るボタンを押した際、元の画面に戻る(全データ画面に戻るか、お気に入り一覧画面に戻るか）
+            if (from != null){
+                if (from.equals("FavoriteFoodListFragment")) {
+                    // お気に入り一覧画面に
+                    intent = new Intent(FavoriteEditFoodActivity.this, FavoriteFoodListActivity.class);
+                    startActivity(intent);
+                } else {
+                    // 全データ画面に
+//                intent = new Intent(FavoriteEditFoodActivity.this, RegistrationHistoryActivity.class);
+//                startActivity(intent);
+                }
+            }
             finish();
         }
         // それ以外・・・
@@ -68,10 +81,12 @@ public class FavoriteEditFoodActivity extends AppCompatActivity {
         return returnVal;
     }
 
+    public void onClickDeleteFavoriteFoodButton(View view){
+        FavoriteAlertDeleteDialogFragment alertFragment = new FavoriteAlertDeleteDialogFragment();
+        alertFragment.show(getSupportFragmentManager(), "FavoriteAlertDeleteDialogFragment");
+    }
 
-
-    public void onClickDeleteFavoriteFoodButton(View view) {
-        // データベースヘルパーオブジェクトからデータベース接続オブジェクトを取得。
+    public void deleteFavoriteFood(){
         FavoriteFoodDatabaseHelper _favoriteFoodHelper = new FavoriteFoodDatabaseHelper(FavoriteEditFoodActivity.this);
         // データベースヘルパーオブジェクトからデータベース接続オブジェクトを取得。
         SQLiteDatabase db = _favoriteFoodHelper.getWritableDatabase();
@@ -85,16 +100,14 @@ public class FavoriteEditFoodActivity extends AppCompatActivity {
         // DBヘルパーオブジェクトを閉じる
         _favoriteFoodHelper.close();
 
-        // 編集画面が終了した後、データ削除を反映した上で元の画面に戻る(Main画面に戻るか、お気に入り一覧画面に戻るか）
+        // 編集画面が終了した後、データ削除を反映した上で元の画面に戻る(main画面に戻るか、お気に入り一覧画面に戻るか）
         Intent intent;
         if (from.equals("FavoriteFoodListFragment")) {
-            // データを更新した上でお気に入り一覧画面に
+            // データを更新した上でお気に入り画面に
             intent = new Intent(FavoriteEditFoodActivity.this, FavoriteFoodListActivity.class);
             startActivity(intent);
         }
         finish();
-
-        Toast.makeText(FavoriteEditFoodActivity.this, "指定のお気に入りデータを削除しました", Toast.LENGTH_LONG).show();
     }
 
     public void onClickEditFavoriteFoodButton(View view) {
