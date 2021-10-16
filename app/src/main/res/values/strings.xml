@@ -3,9 +3,10 @@
     <string name="daily_protein">日間データ</string>
     <string name="graph">グラフ</string>
     <string name="set_border">1日分摂取量設定</string>
-    <string name="favorite">お気に入り</string>
+    <string name="select_favorite">お気に入りから</string>
     <string name="top_message">日々のタンパク質摂取量を記録しましよう！！</string>
-    <string name="register">食べた！</string>
+    <string name="eat">食べた！</string>
+    <string name="register">登録</string>
     <string name="delete">削除</string>
     <string name="cancel">キャンセル</string>
     <!--  登録画面  -->
@@ -16,13 +17,16 @@
     <string name="select">選択</string>
     <!--  メニュー  -->
     <string name="registration_history">これまでの記録</string>
-    <string name="select_favorite">お気に入り</string>
+    <string name="register_favorite">お気に入り登録</string>
     <!--  日間データ  -->
     <string name="search">検索</string>
     <string name="daily_sum">の合計タンパク質摂取量</string>
     <string name="all_data">これまでの全記録一覧</string>
     <string name="search_by_date">日付ごとにデータを確認</string>
     <string name="edit">編集</string>
+    <!--    お気に入り-->
+    <string name="favorite_message">よく食べる食品は登録しておきましょう！</string>
+    <string name="favorite_list">お気に入り</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

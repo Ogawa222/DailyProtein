@@ -6,6 +6,10 @@
         app:showAsAction="never"
         android:title="@string/set_border"/>
     <item
+        android:id="@+id/"
+        app:showAsAction="never"
+        android:title="@string/registration_history"/>
+    <item
         android:id="@+id/RegistrationHistory"
         app:showAsAction="never"
         android:title="@string/registration_history"/>
@@ -16,6 +20,6 @@
     <item
         android:id="@+id/Favorite"
         app:showAsAction="never"
-        android:title="@string/favorite"/>
+        android:title="@string/register_favorite"/>
 
 </menu>
