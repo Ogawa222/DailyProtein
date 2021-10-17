@@ -109,6 +109,11 @@ public class MainActivity extends AppCompatActivity // AppCompatActivityをFragm
             case R.id.Favorite:
                 intent = new Intent(getApplication(), FavoriteFoodActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.SetDailyGoal:
+                intent = new Intent(getApplication(), DailyGoalActivity.class);
+                startActivity(intent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

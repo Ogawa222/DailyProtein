@@ -2,7 +2,7 @@
     <string name="app_name">日間タンパク質摂取量記録</string>
     <string name="daily_protein">日間データ</string>
     <string name="graph">グラフ</string>
-    <string name="set_border">1日分摂取量設定</string>
+    <string name="set_border">1日分目標設定</string>
     <string name="select_favorite">お気に入りから</string>
     <string name="top_message">日々のタンパク質摂取量を記録しましよう！！</string>
     <string name="eat">食べた！</string>
@@ -15,8 +15,12 @@
     <string name="pick_date">日付</string>
     <string name="pick_time">時刻</string>
     <string name="select">選択</string>
+    <!--　1日分目標設定　-->
+    <string name="daily_goal">1日分目標摂取量</string>
+    <string name="daily_goal_message">1日の目標タンパク質摂取量を決めましょう!</string>
+    <string name="set_goal">設定する</string>
     <!--  メニュー  -->
-    <string name="today_registration">今日の記録</string>
+    <string name="today_registration">★今日の記録</string>
     <string name="registration_history">これまでの記録</string>
     <string name="register_favorite">お気に入り登録</string>
     <!--  日間データ  -->
@@ -25,12 +29,14 @@
     <string name="all_data">これまでの全記録一覧</string>
     <string name="search_by_date">日付ごとにデータを確認</string>
     <string name="edit">編集</string>
-    <!--    お気に入り-->
+    <!--  お気に入り  -->
     <string name="favorite_message">よく食べる食品は登録しておきましょう！</string>
     <string name="favorite_list">お気に入り一覧</string>
     <string name="dialog_btn_delete">削除</string>
     <string name="dialog_btn_cancel">キャンセル</string>
     <string name="all_favorite_food">お気に入り一覧</string>
+    <!--  グラフ  -->
+    <string name="daily_graph">時間ごとのタンパク質摂取量</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
