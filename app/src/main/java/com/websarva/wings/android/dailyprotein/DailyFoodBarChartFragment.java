@@ -172,6 +172,9 @@ public class DailyFoodBarChartFragment extends Fragment {
 
         bars.add(dataSet);
 
+        // データベースヘルパーを閉じる
+        _dailyProteinHelper.close();
+
         return bars;
     }
 
