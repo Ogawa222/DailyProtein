@@ -21,6 +21,8 @@ public class DailyHistoryActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         // アクションバーの[戻る]メニューを有効に設定
         actionBar.setDisplayHomeAsUpEnabled(true);
+        // タイトルの変更
+        setTitle(R.string.daily_history);
     }
 
     @Override

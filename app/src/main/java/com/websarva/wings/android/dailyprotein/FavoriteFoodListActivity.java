@@ -21,6 +21,8 @@ public class FavoriteFoodListActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         // アクションバーの[戻る]メニューを有効に設定
         actionBar.setDisplayHomeAsUpEnabled(true);
+        // タイトルの変更
+        setTitle(R.string.all_favorite_food);
 
         intent = getIntent();
         // 編集画面が終了した時の分岐のため(全データ画面に戻るか、日間データに戻るか）

@@ -24,10 +24,12 @@
     <string name="registration_history">これまでの記録</string>
     <string name="register_favorite">お気に入り登録</string>
     <!--  日間データ  -->
+    <string name="daily_history">今日の記録</string>
     <string name="search">検索</string>
     <string name="daily_sum">の合計タンパク質摂取量</string>
     <string name="all_data">これまでの全記録一覧</string>
     <string name="search_by_date">日付ごとにデータを確認</string>
+    <string name="edit_registration">記録の編集</string>
     <string name="edit">編集</string>
     <!--  お気に入り  -->
     <string name="favorite_message">よく食べる食品は登録しておきましょう！</string>
@@ -35,6 +37,7 @@
     <string name="dialog_btn_delete">削除</string>
     <string name="dialog_btn_cancel">キャンセル</string>
     <string name="all_favorite_food">お気に入り一覧</string>
+    <string name="edit_favorite_food">お気に入りの編集</string>
     <!--  グラフ  -->
     <string name="daily_graph">時間ごとのタンパク質摂取量</string>
     <!-- TODO: Remove or change this placeholder text -->

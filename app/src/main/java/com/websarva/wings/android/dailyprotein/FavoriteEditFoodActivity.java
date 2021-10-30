@@ -34,6 +34,8 @@ public class FavoriteEditFoodActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         // アクションバーの[戻る]メニューを有効に設定
         actionBar.setDisplayHomeAsUpEnabled(true);
+        // タイトルの変更
+        setTitle(R.string.edit_favorite_food);
 
         intent = getIntent();
 
