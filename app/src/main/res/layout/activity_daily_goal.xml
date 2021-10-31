@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <TextView
@@ -49,6 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/set_goal"
+        app:backgroundTint="@null"
+        android:background="@drawable/purple_button_background"
+        android:textColor="@drawable/selector_purple_color"
         android:onClick="onSetGoalButtonClick"
         android:layout_marginRight="5dp"/>
 
